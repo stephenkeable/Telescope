@@ -1,6 +1,6 @@
 Meteor.startup(function () {
   Template.welcome_page.helpers({
-    // If setting "enableWelcome" is true return true
+    // If admin setting "enableWelcome" is true return true
     showWelcome: function () {
       if( Settings.get('enableWelcome', false) === false ){
         return false;
