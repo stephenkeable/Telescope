@@ -5,6 +5,7 @@ Settings.addField({
     fieldSchema: {
       type: Boolean,
       optional: true,
+      label: 'Show welcome page',
       autoform: {
         group: 'welcomepage',
         instructions: 'Enable welcome page (requires restart).'

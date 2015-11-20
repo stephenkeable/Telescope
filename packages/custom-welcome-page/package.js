@@ -28,6 +28,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/client/templates/welcome_page.html',
+    'lib/client/templates/welcome_page.js',
     'lib/client/stylesheets/custom.scss'
   ], ['client']);
 
