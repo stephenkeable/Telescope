@@ -47,4 +47,4 @@ telescope:update-prompt
 
 aldeed:template-extension
 
-custom:welcome-page
+custom-welcome-page
