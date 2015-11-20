@@ -1,17 +1,20 @@
 Meteor.startup(function () {
   Template.welcome_page.helpers({
+    // If setting "enableWelcome" is true return true
     showWelcome: function () {
-      // note: should not be reactive
-      if(
-            Settings.get('enableWelcome', false) === false
-        ||  !Users.can.view(Meteor.user())
-        ||  Cookie.get('enableWelcome') === "no"
-        ||  (Meteor.user() && Meteor.user().getSetting('welcomepage.enableWelcome', true) === false)
-      ){
+      if( Settings.get('enableWelcome', false) === false ){
         return false;
       }else{
         return true;
       }
+    },
+    // if user isn't logged in return TRUE
+    notLoggedIn: function () {
+      if (Meteor.user()) {
+        return false;
+        } else {
+        return true;
+        }
     }
   });
 });
